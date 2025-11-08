@@ -1,0 +1,235 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #f8f9fb;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .logo {
+      font-weight: 600;
+      color: #004aad;
+      font-size: 1.3rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #004aad;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 60px;
+      background-color: #ffffff;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 550px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    .hero-text h1 span {
+      color: #004aad;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: #004aad;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #003a8c;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .placeholder-image {
+      width: 420px;
+      height: 280px;
+      background-color: #e9efff;
+      border: 2px dashed #004aad;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #004aad;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .features {
+      padding: 80px 60px;
+      background-color: #f8f9fb;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      color: #004aad;
+      margin-bottom: 50px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 300px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #004aad;
+      color: #fff;
+      text-align: center;
+      padding: 18px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-image {
+        margin-top: 40px;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Logo UNIVAG</div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="#">Criar Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bem-vindo ao <span>Events3</span></h1>
+      <p>Central inteligente para gerenciamento de demandas de marketing do UNIVAG. 
+      Organize solicitações, acompanhe o progresso e otimize sua comunicação em um só lugar.</p>
+      <a href="login.html" class="btn-primary">Acessar Plataforma</a>
+    </div>
+    <div class="hero-image">
+      <div class="placeholder-image">[Espaço para imagem ilustrativa]</div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Por que usar o Events3?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Centralização</h3>
+        <p>Reúna todas as solicitações em um só sistema e elimine o uso de e-mails dispersos.</p>
+      </div>
+      <div class="card">
+        <h3>Agilidade</h3>
+        <p>Acompanhe o status das demandas em tempo real e receba notificações automáticas.</p>
+      </div>
+      <div class="card">
+        <h3>Eficiência</h3>
+        <p>Otimize o tempo da equipe de marketing e tenha métricas claras de produtividade.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Events3 - Desenvolvido para o UNIVAG | Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Admin Marketing | Events3</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #004aad;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 15px;
+      margin: 5px 0;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .sidebar a:hover, .sidebar a.active {
+      background-color: #003a8c;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      padding: 30px 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      color: #004aad;
+      font-size: 1.8rem;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #555;
+    }
+
+    .user-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #ccc;
+    }
+
+    /* KPIs */
+    .kpi-section {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .kpi {
+      flex: 1;
+      min-width: 220px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .kpi h3 {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .kpi p {
+      font-size: 2rem;
+      color: #004aad;
+      font-weight: 700;
+    }
+
+    /* Table */
+    .table-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #f8f9fb;
+      color: #004aad;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
+
+    tr:hover {
+      background-color: #f4f6f9;
+    }
+
+    .status {
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: 500;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .status.pendente { background-color: #fff3cd; color: #856404; }
+    .status.andamento { background-color: #d1ecf1; color: #0c5460; }
+    .status.concluido { background-color: #d4edda; color: #155724; }
+
+    footer {
+      text-align: center;
+      color: #888;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .sidebar h2 {
+        display: none;
+      }
+
+      .main {
+        padding: 20px;
+      }
+
+      .kpi-section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Events3</h2>
+    <a href="#" class="active">Dashboard</a>
+    <a href="#">Demandas</a>
+    <a href="#">Relatórios</a>
+    <a href="#">Configurações</a>
+    <a href="index.html">Sair</a>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Painel do Administrador</h1>
+      <div class="user-info">
+        <span>Admin Marketing</span>
+        <img alt="User">
+      </div>
+    </header>
+
+    <section class="kpi-section">
+      <div class="kpi">
+        <h3>Demandas Pendentes</h3>
+        <p>8</p>
+      </div>
+      <div class="kpi">
+        <h3>Em Andamento</h3>
+        <p>15</p>
+      </div>
+      <div class="kpi">
+        <h3>Concluídas</h3>
+        <p>24</p>
+      </div>
+      <div class="kpi">
+        <h3>Tempo Médio de Entrega</h3>
+        <p>3d</p>
+      </div>
+    </section>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Tipo</th>
+            <th>Setor</th>
+            <th>Status</th>
+            <th>Data</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Campanha de Matrículas</td>
+            <td>Arte</td>
+            <td>Coordenação</td>
+            <td><span class="status pendente">Pendente</span></td>
+            <td>05/11/2025</td>
+            <td><button>Ver</button></td>
+          </tr>
+          <tr>
+            <td>Post Instagram</td>
+            <td>Post</td>
+            <td>Marketing</td>
+            <td><span class="status andamento">Em Andamento</span></td>
+            <td>04/11/2025</td>
+            <td><button>Ver</button></td>
+          </tr>
+          <tr>
+            <td>Banner do Evento UNIVAG</td>
+            <td>Banner</td>
+            <td>Administração</td>
+            <td><span class="status concluido">Concluído</span></td>
+            <td>01/11/2025</td>
+            <td><button>Ver</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      © 2025 Events3 - Painel Administrativo do Marketing | Todos os direitos reservados.
+    </footer>
+  </div>
+</body>
+</html>

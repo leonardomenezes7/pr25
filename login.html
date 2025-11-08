@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Events3</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: #ffffff;
+    }
+
+    .login-container {
+      display: flex;
+      width: 100%;
+    }
+
+    .left-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 60px;
+    }
+
+    .left-side h1 {
+      font-size: 2.2rem;
+      color: #004aad;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .left-side p {
+      color: #666;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    label {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #004aad;
+    }
+
+    .btn-login {
+      background-color: #004aad;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .btn-login:hover {
+      background-color: #003a8c;
+    }
+
+    .btn-admin {
+      background-color: #0078d7;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .btn-admin:hover {
+      background-color: #0060b3;
+    }
+
+    .forgot {
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .forgot a {
+      text-decoration: none;
+      color: #004aad;
+      font-size: 0.95rem;
+    }
+
+    .right-side {
+      flex: 1;
+      background-color: #004aad;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+
+      .right-side {
+        display: none;
+      }
+
+      .left-side {
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="left-side">
+      <h1>Bem-vindo ao Events3</h1>
+      <p>Central de Demandas de Marketing do UNIVAG</p>
+      <form>
+        <div>
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div>
+          <label for="password">Senha</label>
+          <input type="password" id="password" placeholder="Digite sua senha" required>
+        </div>
+        <button type="button" class="btn-login" onclick="window.location.href='form.html'">Entrar</button>
+        <button type="button" class="btn-admin" onclick="window.location.href='sign-in-admin.html'">Entrar como Admin de Marketing</button>
+        <div class="forgot">
+          <a href="#">Esqueci minha senha</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="right-side">
+      Events3
+    </div>
+  </div>
+</body>
+</html>
